@@ -1,0 +1,18 @@
+﻿  fxc compile for debug: C:\Users\home\Downloads\d3d11CodeSet1\Chapter 7 Lighting\Lighting\FX\Lighting.fx
+  Microsoft (R) Direct3D Shader Compiler 10.1
+  Copyright (C) 2013 Microsoft. All rights reserved.
+  
+CUSTOMBUILD : warning X4717: Effects deprecated for D3DCompiler_47
+  
+  compilation code save succeeded; see Lighting.cod
+  compilation object save succeeded; see C:\Users\home\Downloads\d3d11CodeSet1\Chapter 7 Lighting\Lighting\FX\Lighting.fxo
+  d3dApp.cpp
+  d3dUtil.cpp
+  GameTimer.cpp
+  GeometryGenerator.cpp
+  LightHelper.cpp
+  MathHelper.cpp
+  Waves.cpp
+  LightingDemo.cpp
+c:\users\home\downloads\d3d11codeset1\chapter 7 lighting\lighting\lightingdemo.cpp(12): fatal error C1083: Cannot open include file: 'd3dApp.h': No such file or directory
+  Generating Code...
