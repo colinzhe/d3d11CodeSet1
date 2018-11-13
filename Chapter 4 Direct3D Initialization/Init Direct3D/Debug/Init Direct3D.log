@@ -1,8 +1,1 @@
-﻿  d3dApp.cpp
-  d3dUtil.cpp
-  DDSTextureLoader.cpp
-  dxerr.cpp
-  GameTimer.cpp
-  Init Direct3D.cpp
-  Generating Code...
-  Init Direct3D.vcxproj -> C:\Users\home\Downloads\d3d11CodeSet1\Chapter 4 Direct3D Initialization\Init Direct3D\Debug\Init Direct3D.exe
+﻿  Init Direct3D.vcxproj -> C:\Users\czhe\Documents\GitHub\d3d11CodeSet1\Chapter 4 Direct3D Initialization\Init Direct3D\Debug\Init Direct3D.exe

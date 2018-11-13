@@ -1,12 +1,4 @@
-﻿  fxc compile for debug: C:\Users\home\Downloads\d3d11CodeSet1\Chapter 9 Blending\BlendDemo\FX\Basic.fx
-  Microsoft (R) Direct3D Shader Compiler 10.1
-  Copyright (C) 2013 Microsoft. All rights reserved.
-  
-CUSTOMBUILD : warning X4717: Effects deprecated for D3DCompiler_47
-  
-  compilation code save succeeded; see Basic.cod
-  compilation object save succeeded; see C:\Users\home\Downloads\d3d11CodeSet1\Chapter 9 Blending\BlendDemo\FX\Basic.fxo
-  d3dApp.cpp
+﻿  d3dApp.cpp
   d3dUtil.cpp
   DDSTextureLoader.cpp
   dxerr.cpp
@@ -20,10 +12,10 @@ CUSTOMBUILD : warning X4717: Effects deprecated for D3DCompiler_47
   RenderStates.cpp
   Vertex.cpp
   Generating Code...
-Effects11d.lib(d3dxGlobal.obj) : warning LNK4099: PDB 'Effects11.pdb' was not found with 'Effects11d.lib(d3dxGlobal.obj)' or at 'C:\Users\home\Downloads\d3d11CodeSet1\Chapter 9 Blending\BlendDemo\Debug\Effects11.pdb'; linking object as if no debug info
-Effects11d.lib(EffectAPI.obj) : warning LNK4099: PDB 'Effects11.pdb' was not found with 'Effects11d.lib(EffectAPI.obj)' or at 'C:\Users\home\Downloads\d3d11CodeSet1\Chapter 9 Blending\BlendDemo\Debug\Effects11.pdb'; linking object as if no debug info
-Effects11d.lib(EffectLoad.obj) : warning LNK4099: PDB 'Effects11.pdb' was not found with 'Effects11d.lib(EffectLoad.obj)' or at 'C:\Users\home\Downloads\d3d11CodeSet1\Chapter 9 Blending\BlendDemo\Debug\Effects11.pdb'; linking object as if no debug info
-Effects11d.lib(EffectNonRuntime.obj) : warning LNK4099: PDB 'Effects11.pdb' was not found with 'Effects11d.lib(EffectNonRuntime.obj)' or at 'C:\Users\home\Downloads\d3d11CodeSet1\Chapter 9 Blending\BlendDemo\Debug\Effects11.pdb'; linking object as if no debug info
-Effects11d.lib(EffectReflection.obj) : warning LNK4099: PDB 'Effects11.pdb' was not found with 'Effects11d.lib(EffectReflection.obj)' or at 'C:\Users\home\Downloads\d3d11CodeSet1\Chapter 9 Blending\BlendDemo\Debug\Effects11.pdb'; linking object as if no debug info
-Effects11d.lib(EffectRuntime.obj) : warning LNK4099: PDB 'Effects11.pdb' was not found with 'Effects11d.lib(EffectRuntime.obj)' or at 'C:\Users\home\Downloads\d3d11CodeSet1\Chapter 9 Blending\BlendDemo\Debug\Effects11.pdb'; linking object as if no debug info
-  BlendDemo.vcxproj -> C:\Users\home\Downloads\d3d11CodeSet1\Chapter 9 Blending\BlendDemo\Debug\BlendDemo.exe
+Effects11d.lib(d3dxGlobal.obj) : warning LNK4099: PDB 'Effects11.pdb' was not found with 'Effects11d.lib(d3dxGlobal.obj)' or at 'C:\Users\czhe\Documents\GitHub\d3d11CodeSet1\Chapter 9 Blending\BlendDemo\Debug\Effects11.pdb'; linking object as if no debug info
+Effects11d.lib(EffectAPI.obj) : warning LNK4099: PDB 'Effects11.pdb' was not found with 'Effects11d.lib(EffectAPI.obj)' or at 'C:\Users\czhe\Documents\GitHub\d3d11CodeSet1\Chapter 9 Blending\BlendDemo\Debug\Effects11.pdb'; linking object as if no debug info
+Effects11d.lib(EffectLoad.obj) : warning LNK4099: PDB 'Effects11.pdb' was not found with 'Effects11d.lib(EffectLoad.obj)' or at 'C:\Users\czhe\Documents\GitHub\d3d11CodeSet1\Chapter 9 Blending\BlendDemo\Debug\Effects11.pdb'; linking object as if no debug info
+Effects11d.lib(EffectNonRuntime.obj) : warning LNK4099: PDB 'Effects11.pdb' was not found with 'Effects11d.lib(EffectNonRuntime.obj)' or at 'C:\Users\czhe\Documents\GitHub\d3d11CodeSet1\Chapter 9 Blending\BlendDemo\Debug\Effects11.pdb'; linking object as if no debug info
+Effects11d.lib(EffectReflection.obj) : warning LNK4099: PDB 'Effects11.pdb' was not found with 'Effects11d.lib(EffectReflection.obj)' or at 'C:\Users\czhe\Documents\GitHub\d3d11CodeSet1\Chapter 9 Blending\BlendDemo\Debug\Effects11.pdb'; linking object as if no debug info
+Effects11d.lib(EffectRuntime.obj) : warning LNK4099: PDB 'Effects11.pdb' was not found with 'Effects11d.lib(EffectRuntime.obj)' or at 'C:\Users\czhe\Documents\GitHub\d3d11CodeSet1\Chapter 9 Blending\BlendDemo\Debug\Effects11.pdb'; linking object as if no debug info
+  BlendDemo.vcxproj -> C:\Users\czhe\Documents\GitHub\d3d11CodeSet1\Chapter 9 Blending\BlendDemo\Debug\BlendDemo.exe
