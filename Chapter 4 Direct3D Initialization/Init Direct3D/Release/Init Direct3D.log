@@ -1,10 +1,7 @@
 ﻿  d3dApp.cpp
-  d3dUtil.cpp
-  DDSTextureLoader.cpp
-  dxerr.cpp
-  GameTimer.cpp
-  Init Direct3D.cpp
   Generating code
-  All 139 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  59 of 195 functions (30.3%) were compiled, the rest were copied from previous compilation.
+    55 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
-  Init Direct3D.vcxproj -> C:\Users\czhe\Documents\GitHub\d3d11CodeSet1\Chapter 4 Direct3D Initialization\Init Direct3D\Release\Init Direct3D.exe
+  Init Direct3D.vcxproj -> C:\Users\home\Downloads\d3d11CodeSet1\Chapter 4 Direct3D Initialization\Init Direct3D\Release\Init Direct3D.exe
