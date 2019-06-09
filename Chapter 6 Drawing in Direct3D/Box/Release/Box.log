@@ -1,0 +1,7 @@
+﻿  BoxDemo.cpp
+  Generating code
+  163 of 391 functions (41.7%) were compiled, the rest were copied from previous compilation.
+    157 functions were new in current compilation
+    31 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  Box.vcxproj -> C:\Users\czhe\Downloads\d3d11CodeSet1\Chapter 6 Drawing in Direct3D\Box\Release\Box.exe

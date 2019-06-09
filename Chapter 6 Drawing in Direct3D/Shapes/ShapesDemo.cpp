@@ -11,8 +11,13 @@
 
 #include "d3dApp.h"
 #include "d3dx11Effect.h"
-#include "GeometryGenerator.h"
 #include "MathHelper.h"
+#include <DirectXMath.h>
+#include <DirectXPackedVector.h>
+#include "D3DCompiler.h"
+#include "GeometryGenerator.h"
+using namespace std;
+using namespace DirectX;
 
 struct Vertex
 {
@@ -350,6 +355,7 @@ void ShapesApp::BuildGeometryBuffers()
 	std::vector<Vertex> vertices(totalVertexCount);
 
 	XMFLOAT4 black(0.0f, 0.0f, 0.0f, 1.0f);
+	XMFLOAT4 red(1.0f, 0.0f, 0.0f, 1.0f);
 
 	UINT k = 0;
 	for(size_t i = 0; i < box.Vertices.size(); ++i, ++k)
@@ -361,7 +367,7 @@ void ShapesApp::BuildGeometryBuffers()
 	for(size_t i = 0; i < grid.Vertices.size(); ++i, ++k)
 	{
 		vertices[k].Pos   = grid.Vertices[i].Position;
-		vertices[k].Color = black;
+		vertices[k].Color = red;
 	}
 
 	for(size_t i = 0; i < sphere.Vertices.size(); ++i, ++k)

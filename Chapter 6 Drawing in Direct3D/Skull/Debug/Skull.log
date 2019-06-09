@@ -1,0 +1,18 @@
+﻿  fxc compile for debug: C:\Users\czhe\Downloads\d3d11CodeSet1\Chapter 6 Drawing in Direct3D\Skull\FX\color.fx
+  Microsoft (R) Direct3D Shader Compiler 10.1
+  Copyright (C) 2013 Microsoft. All rights reserved.
+  
+CUSTOMBUILD : warning X4717: Effects deprecated for D3DCompiler_47
+  
+  compilation code save succeeded; see color.cod
+  compilation object save succeeded; see C:\Users\czhe\Downloads\d3d11CodeSet1\Chapter 6 Drawing in Direct3D\Skull\FX\color.fxo
+  d3dApp.cpp
+  d3dUtil.cpp
+  DDSTextureLoader.cpp
+  dxerr.cpp
+  GameTimer.cpp
+  GeometryGenerator.cpp
+  MathHelper.cpp
+  SkullDemo.cpp
+  Generating Code...
+  Skull.vcxproj -> C:\Users\czhe\Downloads\d3d11CodeSet1\Chapter 6 Drawing in Direct3D\Skull\Debug\Skull.exe

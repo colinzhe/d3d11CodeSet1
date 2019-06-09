@@ -1,7 +1,9 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Skull", "Skull.vcxproj", "{CC5604E8-E75A-4BFF-8139-8F60C647E863}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.645
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Skull", "Skull.vcxproj", "{E76DB861-9CF7-4CF2-A077-78AA9E5F5303}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,12 +11,15 @@ Global
 		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{CC5604E8-E75A-4BFF-8139-8F60C647E863}.Debug|Win32.ActiveCfg = Debug|Win32
-		{CC5604E8-E75A-4BFF-8139-8F60C647E863}.Debug|Win32.Build.0 = Debug|Win32
-		{CC5604E8-E75A-4BFF-8139-8F60C647E863}.Release|Win32.ActiveCfg = Release|Win32
-		{CC5604E8-E75A-4BFF-8139-8F60C647E863}.Release|Win32.Build.0 = Release|Win32
+		{E76DB861-9CF7-4CF2-A077-78AA9E5F5303}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E76DB861-9CF7-4CF2-A077-78AA9E5F5303}.Debug|Win32.Build.0 = Debug|Win32
+		{E76DB861-9CF7-4CF2-A077-78AA9E5F5303}.Release|Win32.ActiveCfg = Release|Win32
+		{E76DB861-9CF7-4CF2-A077-78AA9E5F5303}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F0319DA4-013B-4656-896D-7DD3B0E14205}
 	EndGlobalSection
 EndGlobal

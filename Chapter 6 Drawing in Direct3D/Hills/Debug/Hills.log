@@ -1,0 +1,24 @@
+﻿  fxc compile for debug: C:\Users\czhe\Downloads\d3d11CodeSet1\Chapter 6 Drawing in Direct3D\Hills\FX\color.fx
+  Microsoft (R) Direct3D Shader Compiler 10.1
+  Copyright (C) 2013 Microsoft. All rights reserved.
+  
+CUSTOMBUILD : warning X4717: Effects deprecated for D3DCompiler_47
+  
+  compilation code save succeeded; see color.cod
+  compilation object save succeeded; see C:\Users\czhe\Downloads\d3d11CodeSet1\Chapter 6 Drawing in Direct3D\Hills\FX\color.fxo
+  d3dApp.cpp
+  d3dUtil.cpp
+  DDSTextureLoader.cpp
+  dxerr.cpp
+  GameTimer.cpp
+  GeometryGenerator.cpp
+  MathHelper.cpp
+  HillsDemo.cpp
+  Generating Code...
+Effects11d.lib(d3dxGlobal.obj) : warning LNK4099: PDB 'Effects11.pdb' was not found with 'Effects11d.lib(d3dxGlobal.obj)' or at 'C:\Users\czhe\Downloads\d3d11CodeSet1\Chapter 6 Drawing in Direct3D\Hills\Debug\Effects11.pdb'; linking object as if no debug info
+Effects11d.lib(EffectAPI.obj) : warning LNK4099: PDB 'Effects11.pdb' was not found with 'Effects11d.lib(EffectAPI.obj)' or at 'C:\Users\czhe\Downloads\d3d11CodeSet1\Chapter 6 Drawing in Direct3D\Hills\Debug\Effects11.pdb'; linking object as if no debug info
+Effects11d.lib(EffectLoad.obj) : warning LNK4099: PDB 'Effects11.pdb' was not found with 'Effects11d.lib(EffectLoad.obj)' or at 'C:\Users\czhe\Downloads\d3d11CodeSet1\Chapter 6 Drawing in Direct3D\Hills\Debug\Effects11.pdb'; linking object as if no debug info
+Effects11d.lib(EffectNonRuntime.obj) : warning LNK4099: PDB 'Effects11.pdb' was not found with 'Effects11d.lib(EffectNonRuntime.obj)' or at 'C:\Users\czhe\Downloads\d3d11CodeSet1\Chapter 6 Drawing in Direct3D\Hills\Debug\Effects11.pdb'; linking object as if no debug info
+Effects11d.lib(EffectReflection.obj) : warning LNK4099: PDB 'Effects11.pdb' was not found with 'Effects11d.lib(EffectReflection.obj)' or at 'C:\Users\czhe\Downloads\d3d11CodeSet1\Chapter 6 Drawing in Direct3D\Hills\Debug\Effects11.pdb'; linking object as if no debug info
+Effects11d.lib(EffectRuntime.obj) : warning LNK4099: PDB 'Effects11.pdb' was not found with 'Effects11d.lib(EffectRuntime.obj)' or at 'C:\Users\czhe\Downloads\d3d11CodeSet1\Chapter 6 Drawing in Direct3D\Hills\Debug\Effects11.pdb'; linking object as if no debug info
+  Hills.vcxproj -> C:\Users\czhe\Downloads\d3d11CodeSet1\Chapter 6 Drawing in Direct3D\Hills\Debug\Hills.exe

@@ -291,7 +291,7 @@ void BoxApp::BuildGeometryBuffers()
  
 void BoxApp::BuildFX()
 {
-	DWORD shaderFlags = 0;
+	/*DWORD shaderFlags = 0;
 #if defined( DEBUG ) || defined( _DEBUG )
     shaderFlags |= D3D10_SHADER_DEBUG;
 	shaderFlags |= D3D10_SHADER_SKIP_OPTIMIZATION;
@@ -323,14 +323,27 @@ void BoxApp::BuildFX()
 	// Even if there are no compilationMsgs, check to make sure there were no other errors.
 	if(FAILED(hr))
 	{
-		DXTrace(__FILEW__, (DWORD)__LINE__, hr, L"D3DX11CompileFromFile", true);
+		DXTrace(__FILEW__, (DWORD)__LINE__, hr, L"D3DCompileFromFile", true);
 	}
 
 	HR(D3DX11CreateEffectFromMemory(compiledShader->GetBufferPointer(), compiledShader->GetBufferSize(), 
 		0, md3dDevice, &mFX));
 
 	// Done with compiled shader.
-	ReleaseCOM(compiledShader);
+	ReleaseCOM(compiledShader);*/
+
+	std::ifstream fin("fx/color.fxo", std::ios::binary);
+
+	fin.seekg(0, std::ios_base::end);
+	int size = (int)fin.tellg();
+	fin.seekg(0, std::ios_base::beg);
+	std::vector<char> compiledShader(size);
+
+	fin.read(&compiledShader[0], size);
+	fin.close();
+
+	HR(D3DX11CreateEffectFromMemory(&compiledShader[0], size,
+		0, md3dDevice, &mFX));
 
 	mTech    = mFX->GetTechniqueByName("ColorTech");
 	mfxWorldViewProj = mFX->GetVariableByName("gWorldViewProj")->AsMatrix();

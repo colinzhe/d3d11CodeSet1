@@ -1,0 +1,24 @@
+﻿  fxc compile for release: C:\Users\czhe\Downloads\d3d11CodeSet1\Chapter 9 Blending\BlendDemo\FX\Basic.fx
+  Microsoft (R) Direct3D Shader Compiler 10.1
+  Copyright (C) 2013 Microsoft. All rights reserved.
+  
+CUSTOMBUILD : warning X4717: Effects deprecated for D3DCompiler_47
+  
+  compilation object save succeeded; see C:\Users\czhe\Downloads\d3d11CodeSet1\Chapter 9 Blending\BlendDemo\FX\Basic.fxo
+  d3dApp.cpp
+  d3dUtil.cpp
+  DDSTextureLoader.cpp
+  dxerr.cpp
+  GameTimer.cpp
+  GeometryGenerator.cpp
+  LightHelper.cpp
+  MathHelper.cpp
+  Waves.cpp
+  BlendDemo.cpp
+c:\users\czhe\downloads\d3d11codeset1\chapter 9 blending\blenddemo\blenddemo.cpp(16): fatal error C1083: Cannot open include file: 'd3dApp.h': No such file or directory
+  Effects.cpp
+c:\users\czhe\downloads\d3d11codeset1\chapter 9 blending\blenddemo\effects.h(11): fatal error C1083: Cannot open include file: 'd3dUtil.h': No such file or directory
+  RenderStates.cpp
+c:\users\czhe\downloads\d3d11codeset1\chapter 9 blending\blenddemo\renderstates.h(10): fatal error C1083: Cannot open include file: 'd3dUtil.h': No such file or directory
+  Vertex.cpp
+c:\users\czhe\downloads\d3d11codeset1\chapter 9 blending\blenddemo\vertex.h(10): fatal error C1083: Cannot open include file: 'd3dUtil.h': No such file or directory

@@ -11,8 +11,13 @@
 
 #include "d3dApp.h"
 #include "d3dx11Effect.h"
-#include "GeometryGenerator.h"
 #include "MathHelper.h"
+#include <DirectXMath.h>
+#include <DirectXPackedVector.h>
+#include "D3DCompiler.h"
+#include "GeometryGenerator.h"
+using namespace std;
+using namespace DirectX;
  
 struct Vertex
 {
