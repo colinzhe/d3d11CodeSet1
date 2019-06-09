@@ -12,6 +12,11 @@
 #include "d3dApp.h"
 #include "d3dx11Effect.h"
 #include "MathHelper.h"
+#include <DirectXMath.h>
+#include <DirectXPackedVector.h>
+#include "D3DCompiler.h"
+using namespace std;
+using namespace DirectX;
 
 struct Vertex
 {
@@ -222,14 +227,14 @@ void BoxApp::BuildGeometryBuffers()
 	// Create vertex buffer
     Vertex vertices[] =
     {
-		{ XMFLOAT3(-1.0f, -1.0f, -1.0f), (const float*)&Colors::White   },
-		{ XMFLOAT3(-1.0f, +1.0f, -1.0f), (const float*)&Colors::Black   },
-		{ XMFLOAT3(+1.0f, +1.0f, -1.0f), (const float*)&Colors::Red     },
-		{ XMFLOAT3(+1.0f, -1.0f, -1.0f), (const float*)&Colors::Green   },
-		{ XMFLOAT3(-1.0f, -1.0f, +1.0f), (const float*)&Colors::Blue    },
-		{ XMFLOAT3(-1.0f, +1.0f, +1.0f), (const float*)&Colors::Yellow  },
-		{ XMFLOAT3(+1.0f, +1.0f, +1.0f), (const float*)&Colors::Cyan    },
-		{ XMFLOAT3(+1.0f, -1.0f, +1.0f), (const float*)&Colors::Magenta }
+		{ XMFLOAT3(-1.0f, -1.0f, -1.0f), XMFLOAT4((const float*)&Colors::White)   },
+		{ XMFLOAT3(-1.0f, +1.0f, -1.0f), XMFLOAT4((const float*)&Colors::Black)   },
+		{ XMFLOAT3(+1.0f, +1.0f, -1.0f), XMFLOAT4((const float*)&Colors::Red)     },
+		{ XMFLOAT3(+1.0f, -1.0f, -1.0f), XMFLOAT4((const float*)&Colors::Green)   },
+		{ XMFLOAT3(-1.0f, -1.0f, +1.0f), XMFLOAT4((const float*)&Colors::Blue)    },
+		{ XMFLOAT3(-1.0f, +1.0f, +1.0f), XMFLOAT4((const float*)&Colors::Yellow)  },
+		{ XMFLOAT3(+1.0f, +1.0f, +1.0f), XMFLOAT4((const float*)&Colors::Cyan)    },
+		{ XMFLOAT3(+1.0f, -1.0f, +1.0f), XMFLOAT4((const float*)&Colors::Magenta) }
     };
 
     D3D11_BUFFER_DESC vbd;
@@ -294,8 +299,19 @@ void BoxApp::BuildFX()
  
 	ID3D10Blob* compiledShader = 0;
 	ID3D10Blob* compilationMsgs = 0;
-	HRESULT hr = D3DX11CompileFromFile(L"FX/color.fx", 0, 0, 0, "fx_5_0", shaderFlags, 
-		0, 0, &compiledShader, &compilationMsgs, 0);
+	HRESULT hr = D3DCompileFromFile(
+		L"FX/color.fx", // pSrcFile -> pFileName
+		0, // *pDefines -> *pDefines
+		0, // pInclude -> pInclude
+		0, // pFunctionName -> pEntrypoint
+		"fx_5_0", // pProfile -> pTarget
+		shaderFlags, // Flags1 -> Flags1
+		0, // Flags2 -> Flags 2
+		// 0, // *pPump -> ?
+		&compiledShader, // ppShader -> ppCode
+		&compilationMsgs // ppErrorMsgs -> ppErrorMsgs
+		//0
+	);
 
 	// compilationMsgs can store errors or warnings.
 	if( compilationMsgs != 0 )
@@ -307,7 +323,7 @@ void BoxApp::BuildFX()
 	// Even if there are no compilationMsgs, check to make sure there were no other errors.
 	if(FAILED(hr))
 	{
-		DXTrace(__FILE__, (DWORD)__LINE__, hr, L"D3DX11CompileFromFile", true);
+		DXTrace(__FILEW__, (DWORD)__LINE__, hr, L"D3DX11CompileFromFile", true);
 	}
 
 	HR(D3DX11CreateEffectFromMemory(compiledShader->GetBufferPointer(), compiledShader->GetBufferSize(), 
