@@ -1,0 +1,15 @@
+﻿  d3dApp.cpp
+  d3dUtil.cpp
+  GameTimer.cpp
+  GeometryGenerator.cpp
+  LightHelper.cpp
+  MathHelper.cpp
+  Waves.cpp
+  dxerr.cpp
+  Effects.cpp
+  LitSkullDemo.cpp
+  Vertex.cpp
+  Generating code
+  All 702 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  LitSkull.vcxproj -> C:\Users\czhe\Downloads\d3d11CodeSet1\Chapter 7 Lighting\LitSkull\Release\LitSkull.exe

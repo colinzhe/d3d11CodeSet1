@@ -14,6 +14,8 @@
 #include "MathHelper.h"
 #include "LightHelper.h"
 #include "Waves.h"
+using namespace std;
+using namespace DirectX;
 
 struct Vertex
 {

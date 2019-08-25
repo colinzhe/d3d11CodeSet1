@@ -1,0 +1,20 @@
+﻿  fxc compile for release: C:\Users\czhe\Downloads\d3d11CodeSet1\Chapter 7 Lighting\Lighting\FX\Lighting.fx
+  Microsoft (R) Direct3D Shader Compiler 10.1
+  Copyright (C) 2013 Microsoft. All rights reserved.
+  
+CUSTOMBUILD : warning X4717: Effects deprecated for D3DCompiler_47
+  
+  compilation object save succeeded; see C:\Users\czhe\Downloads\d3d11CodeSet1\Chapter 7 Lighting\Lighting\FX\Lighting.fxo
+  d3dApp.cpp
+  d3dUtil.cpp
+  GameTimer.cpp
+  GeometryGenerator.cpp
+  dxerr.cpp
+  LightHelper.cpp
+  MathHelper.cpp
+  Waves.cpp
+  LightingDemo.cpp
+  Generating code
+  All 602 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Lighting.vcxproj -> C:\Users\czhe\Downloads\d3d11CodeSet1\Chapter 7 Lighting\Lighting\Release\Lighting.exe

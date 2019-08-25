@@ -17,6 +17,8 @@
 #include "LightHelper.h"
 #include "Effects.h"
 #include "Vertex.h"
+using namespace std;
+using namespace DirectX;
 
 class LitSkullApp : public D3DApp 
 {
