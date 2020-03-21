@@ -68,9 +68,9 @@ void ComputeDirectionalLight(Material mat, DirectionalLight L,
 
 	// The light vector aims opposite the direction the light rays travel.
 	float3 lightVec = -L.Direction;
-
+	
 	// Add ambient term.
-	ambient = mat.Ambient * L.Ambient;	
+	ambient = mat.Ambient * L.Ambient;
 
 	// Add diffuse and specular term, provided the surface is in 
 	// the line of site of the light.

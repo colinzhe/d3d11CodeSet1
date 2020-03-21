@@ -27,6 +27,7 @@ D3DApp::D3DApp(HINSTANCE hInstance)
 :	mhAppInst(hInstance),
 	mMainWndCaption(L"D3D11 Application"),
 	md3dDriverType(D3D_DRIVER_TYPE_HARDWARE),
+	//md3dDriverType(D3D_DRIVER_TYPE_REFERENCE),
 	mClientWidth(800),
 	mClientHeight(600),
 	mEnable4xMsaa(false),
@@ -186,15 +187,17 @@ void D3DApp::OnResize()
 
 	md3dImmediateContext->OMSetRenderTargets(1, &mRenderTargetView, mDepthStencilView);
 	
-
+	char s[256];
+	sprintf(s, "*** Resize().\n");
+	OutputDebugStringA(s);
 	// Set the viewport transform.
 
-	mScreenViewport.TopLeftX = 0;
-	mScreenViewport.TopLeftY = 0;
-	mScreenViewport.Width    = static_cast<float>(mClientWidth);
-	mScreenViewport.Height   = static_cast<float>(mClientHeight);
-	mScreenViewport.MinDepth = 0.0f;
-	mScreenViewport.MaxDepth = 1.0f;
+	mScreenViewport.TopLeftX =	0;
+	mScreenViewport.TopLeftY =	0;
+	mScreenViewport.Width	 =	static_cast<float>(mClientWidth);
+	mScreenViewport.Height   =	static_cast<float>(mClientHeight);
+	mScreenViewport.MinDepth =	0.0f;
+	mScreenViewport.MaxDepth =	1.0f;
 
 	md3dImmediateContext->RSSetViewports(1, &mScreenViewport);
 }
@@ -209,8 +212,10 @@ LRESULT D3DApp::MsgProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 	case WM_ACTIVATE:
 		if( LOWORD(wParam) == WA_INACTIVE )
 		{
-			mAppPaused = true;
-			mTimer.Stop();
+			//mAppPaused = true;
+			//mTimer.Stop();
+			mAppPaused = false;
+			mTimer.Start();
 		}
 		else
 		{
@@ -380,19 +385,60 @@ bool D3DApp::InitDirect3D()
 
 	CreateDXGIFactory(__uuidof(IDXGIFactory), (void**)&pFactory);
 
+	char s[256];
+
 	UINT i = 0;
 	IDXGIAdapter * pAdapter;
 	std::vector <IDXGIAdapter*> vAdapters;
 	while (pFactory->EnumAdapters(i, &pAdapter) != DXGI_ERROR_NOT_FOUND)
 	{
 		vAdapters.push_back(pAdapter);
+		sprintf(s, "*** Adapter %d.\n", i);
+		OutputDebugStringA(s);
 		++i;
-		OutputDebugString(L"test\n");
+	}
+
+	UINT j = 0;
+	IDXGIOutput * pOutput;
+	std::vector <IDXGIOutput*> vOutputs;
+	for (auto it = vAdapters.begin(); it != vAdapters.end(); ++it)
+	{
+		while ((*it)->EnumOutputs(j, &pOutput) != DXGI_ERROR_NOT_FOUND)
+		{
+			vOutputs.push_back(pOutput);
+			sprintf(s, "*** Output %d.\n", j);
+			OutputDebugStringA(s);
+			++j;
+		}
+	}
+
+	UINT numModes = 0;
+	DXGI_FORMAT format = DXGI_FORMAT_R8G8B8A8_UNORM;
+	UINT flags = DXGI_ENUM_MODES_INTERLACED;
+
+	for (auto it = vOutputs.begin(); it != vOutputs.end(); ++it)
+	{
+		(*it)->GetDisplayModeList(format, NULL, &numModes, NULL);
+		DXGI_MODE_DESC * pDescs = new DXGI_MODE_DESC[numModes];
+		(*it)->GetDisplayModeList(format, NULL, &numModes, pDescs);
+		sprintf(s, "*** Modes supported: %d.\n", numModes);
+		OutputDebugStringA(s);
+
+		for (UINT k = 0; k < numModes; k++)
+		{
+			sprintf(s, "*** Width = %d, ", pDescs[k].Width);
+			OutputDebugStringA(s);
+			sprintf(s, "*** Height = %d, ", pDescs[k].Height);
+			OutputDebugStringA(s);
+			sprintf(s, "*** Refresh = %d/%d.\n", pDescs[k].RefreshRate.Numerator, pDescs[k].RefreshRate.Denominator);
+			OutputDebugStringA(s);
+		}
 	}
 
 	D3D_FEATURE_LEVEL featureLevel;
 	HRESULT hr = D3D11CreateDevice(
-			vAdapters.at(0),                 // default adapter
+			//0,                 // default adapter
+			vAdapters.at(0),                 // specify adapter
 			D3D_DRIVER_TYPE_UNKNOWN,
 			0,                 // no software device
 			createDeviceFlags, 

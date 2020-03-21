@@ -113,7 +113,7 @@ LightingApp::LightingApp(HINSTANCE hInstance)
   mFX(0), mTech(0), mfxWorld(0), mfxWorldInvTranspose(0), mfxEyePosW(0), 
   mfxDirLight(0), mfxPointLight(0), mfxSpotLight(0), mfxMaterial(0),
   mfxWorldViewProj(0), 
-  mInputLayout(0), mEyePosW(0.0f, 0.0f, 0.0f), mTheta(1.5f*MathHelper::Pi), mPhi(0.1f*MathHelper::Pi), mRadius(80.0f)
+  mInputLayout(0), mEyePosW(0.0f, 0.0f, 0.0f), mTheta(1.7f*MathHelper::Pi), mPhi(0.3f*MathHelper::Pi), mRadius(250.0f)
 {
 	mMainWndCaption = L"Lighting Demo";
 	
