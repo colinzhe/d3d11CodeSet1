@@ -46,7 +46,7 @@ private:
 
 private:
 	ID3D11Buffer* mBoxVB;
-	ID3D11Buffer* mBoxIB;
+	//ID3D11Buffer* mBoxIB;
 
 	ID3DX11Effect* mFX;
 	ID3DX11EffectTechnique* mTech;
@@ -83,7 +83,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevInstance,
  
 
 TriangleApp::TriangleApp(HINSTANCE hInstance)
-: D3DApp(hInstance), mBoxVB(0), mBoxIB(0), mFX(0), mTech(0),
+: D3DApp(hInstance), mBoxVB(0), /*mBoxIB(0), */mFX(0), mTech(0),
   mfxWorldViewProj(0), mInputLayout(0), 
   mTheta(1.5f*MathHelper::Pi), mPhi(0.25f*MathHelper::Pi), mRadius(5.0f)
 {
@@ -101,7 +101,7 @@ TriangleApp::TriangleApp(HINSTANCE hInstance)
 TriangleApp::~TriangleApp()
 {
 	ReleaseCOM(mBoxVB);
-	ReleaseCOM(mBoxIB);
+	//ReleaseCOM(mBoxIB);
 	ReleaseCOM(mFX);
 	ReleaseCOM(mInputLayout);
 }
@@ -154,7 +154,7 @@ void TriangleApp::DrawScene()
 	UINT stride = sizeof(Vertex);
     UINT offset = 0;
     md3dImmediateContext->IASetVertexBuffers(0, 1, &mBoxVB, &stride, &offset);
-	md3dImmediateContext->IASetIndexBuffer(mBoxIB, DXGI_FORMAT_R32_UINT, 0);
+	//md3dImmediateContext->IASetIndexBuffer(mBoxIB, DXGI_FORMAT_R32_UINT, 0);
 
 	// Set constants
 	XMMATRIX world = XMLoadFloat4x4(&mWorld);
@@ -171,7 +171,8 @@ void TriangleApp::DrawScene()
         mTech->GetPassByIndex(p)->Apply(0, md3dImmediateContext);
         
 		// 36 indices for the box.
-		md3dImmediateContext->DrawIndexed(36, 0, 0);
+		//md3dImmediateContext->DrawIndexed(3, 0, 0);
+		md3dImmediateContext->Draw(3, 0);
     }
 
 	HR(mSwapChain->Present(0, 0));
@@ -243,7 +244,7 @@ void TriangleApp::BuildGeometryBuffers()
     vinitData.pSysMem = vertices;
     HR(md3dDevice->CreateBuffer(&vbd, &vinitData, &mBoxVB));
 
-
+	/*
 	// Create the index buffer
 
 	UINT indices[] = {
@@ -260,7 +261,7 @@ void TriangleApp::BuildGeometryBuffers()
 	ibd.StructureByteStride = 0;
     D3D11_SUBRESOURCE_DATA iinitData;
     iinitData.pSysMem = indices;
-    HR(md3dDevice->CreateBuffer(&ibd, &iinitData, &mBoxIB));
+    HR(md3dDevice->CreateBuffer(&ibd, &iinitData, &mBoxIB));*/
 }
  
 void TriangleApp::BuildFX()
