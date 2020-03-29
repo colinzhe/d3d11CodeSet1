@@ -1,0 +1,39 @@
+﻿  fxc compile for release: C:\Users\home\Downloads\d3d11CodeSet1\Chapter 6 Drawing in Direct3D\LineList\FX\color.fx
+  Microsoft (R) Direct3D Shader Compiler 10.1
+  Copyright (C) 2013 Microsoft. All rights reserved.
+  
+CUSTOMBUILD : warning X4717: Effects deprecated for D3DCompiler_47
+  
+  compilation object save succeeded; see C:\Users\home\Downloads\d3d11CodeSet1\Chapter 6 Drawing in Direct3D\LineList\FX\color.fxo
+  d3dApp.cpp
+c:\users\home\downloads\d3d11codeset1\common\d3dapp.cpp(191): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\stdio.h(1774): note: see declaration of 'sprintf'
+c:\users\home\downloads\d3d11codeset1\common\d3dapp.cpp(396): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\stdio.h(1774): note: see declaration of 'sprintf'
+c:\users\home\downloads\d3d11codeset1\common\d3dapp.cpp(409): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\stdio.h(1774): note: see declaration of 'sprintf'
+c:\users\home\downloads\d3d11codeset1\common\d3dapp.cpp(424): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\stdio.h(1774): note: see declaration of 'sprintf'
+c:\users\home\downloads\d3d11codeset1\common\d3dapp.cpp(429): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\stdio.h(1774): note: see declaration of 'sprintf'
+c:\users\home\downloads\d3d11codeset1\common\d3dapp.cpp(431): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\stdio.h(1774): note: see declaration of 'sprintf'
+c:\users\home\downloads\d3d11codeset1\common\d3dapp.cpp(433): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\stdio.h(1774): note: see declaration of 'sprintf'
+  d3dUtil.cpp
+  DDSTextureLoader.cpp
+  dxerr.cpp
+  GameTimer.cpp
+  GeometryGenerator.cpp
+  MathHelper.cpp
+  LineListDemo.cpp
+  Generating code
+  All 474 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+Effects11.lib(d3dxGlobal.obj) : warning LNK4099: PDB 'Effects11.pdb' was not found with 'Effects11.lib(d3dxGlobal.obj)' or at 'C:\Users\home\Downloads\d3d11CodeSet1\Chapter 6 Drawing in Direct3D\LineList\Release\Effects11.pdb'; linking object as if no debug info
+Effects11.lib(EffectAPI.obj) : warning LNK4099: PDB 'Effects11.pdb' was not found with 'Effects11.lib(EffectAPI.obj)' or at 'C:\Users\home\Downloads\d3d11CodeSet1\Chapter 6 Drawing in Direct3D\LineList\Release\Effects11.pdb'; linking object as if no debug info
+Effects11.lib(EffectLoad.obj) : warning LNK4099: PDB 'Effects11.pdb' was not found with 'Effects11.lib(EffectLoad.obj)' or at 'C:\Users\home\Downloads\d3d11CodeSet1\Chapter 6 Drawing in Direct3D\LineList\Release\Effects11.pdb'; linking object as if no debug info
+Effects11.lib(EffectNonRuntime.obj) : warning LNK4099: PDB 'Effects11.pdb' was not found with 'Effects11.lib(EffectNonRuntime.obj)' or at 'C:\Users\home\Downloads\d3d11CodeSet1\Chapter 6 Drawing in Direct3D\LineList\Release\Effects11.pdb'; linking object as if no debug info
+Effects11.lib(EffectReflection.obj) : warning LNK4099: PDB 'Effects11.pdb' was not found with 'Effects11.lib(EffectReflection.obj)' or at 'C:\Users\home\Downloads\d3d11CodeSet1\Chapter 6 Drawing in Direct3D\LineList\Release\Effects11.pdb'; linking object as if no debug info
+Effects11.lib(EffectRuntime.obj) : warning LNK4099: PDB 'Effects11.pdb' was not found with 'Effects11.lib(EffectRuntime.obj)' or at 'C:\Users\home\Downloads\d3d11CodeSet1\Chapter 6 Drawing in Direct3D\LineList\Release\Effects11.pdb'; linking object as if no debug info
+  LineList.vcxproj -> C:\Users\home\Downloads\d3d11CodeSet1\Chapter 6 Drawing in Direct3D\LineList\Release\LineList.exe
