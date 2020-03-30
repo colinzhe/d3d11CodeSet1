@@ -17,7 +17,7 @@
 
 #define D3DX11_EFFECTS_VERSION 1115
 
-#if defined(_XBOX_ONE) && defined(_TITLE)
+#if defined(_XBoxPyramid_ONE) && defined(_TITLE)
 #include <d3d11_x.h>
 #define DCOMMON_H_INCLUDED
 #define NO_D3D11_DEBUG_NAME

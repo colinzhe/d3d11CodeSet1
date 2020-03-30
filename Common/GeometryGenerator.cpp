@@ -7,7 +7,7 @@
 
 using namespace DirectX;
 
-void GeometryGenerator::CreateBox(float width, float height, float depth, MeshData& meshData)
+void GeometryGenerator::CreateBoxPyramid(float width, float height, float depth, MeshData& meshData)
 {
 	//
 	// Create the vertices.

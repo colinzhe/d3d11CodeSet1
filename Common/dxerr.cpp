@@ -3911,7 +3911,7 @@ void WINAPI DXGetErrorDescriptionW( _In_ HRESULT hr, _Out_cap_(count) WCHAR* des
 
 //-----------------------------------------------------------------------------
 HRESULT WINAPI DXTraceW( _In_z_ const WCHAR* strFile, _In_ DWORD dwLine, _In_ HRESULT hr,
-                         _In_opt_ const WCHAR* strMsg, _In_ bool bPopMsgBox )
+                         _In_opt_ const WCHAR* strMsg, _In_ bool bPopMsgBOX )
 {
     WCHAR strBufferLine[128];
     WCHAR strBufferError[256];
@@ -3938,7 +3938,7 @@ HRESULT WINAPI DXTraceW( _In_z_ const WCHAR* strFile, _In_ DWORD dwLine, _In_ HR
     OutputDebugStringW( L"\n" );
 
 #if !defined(WINAPI_FAMILY) || (WINAPI_FAMILY == WINAPI_FAMILY_DESKTOP_APP)
-    if( bPopMsgBox )
+    if( bPopMsgBOX )
     {
         WCHAR strBufferFile[MAX_PATH];
         wcscpy_s( strBufferFile, MAX_PATH, L"" );
@@ -3958,7 +3958,7 @@ HRESULT WINAPI DXTraceW( _In_z_ const WCHAR* strFile, _In_ DWORD dwLine, _In_ HR
             DebugBreak();
     }
 #else
-    UNREFERENCED_PARAMETER(bPopMsgBox);
+    UNREFERENCED_PARAMETER(bPopMsgBOX);
 #endif
 
     return hr;
